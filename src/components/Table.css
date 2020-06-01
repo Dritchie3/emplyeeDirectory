@@ -2,3 +2,7 @@ thead{
     background-color: gray;
     font-weight: bold;
 }
+
+tbody {
+    text-align: center;
+}

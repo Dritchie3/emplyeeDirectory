@@ -21,8 +21,8 @@ function Table() {
                     <td onClick={() => sortFunc("name")}><Button>First Name</Button></td>
                     <td>Last Name</td>
                     <td>UID</td>
-                    <td>Gender</td>
-                    {/* <td onClick={() => sortFunc("Gender")}><Button>Gender</Button></td> */}
+                    {/* <td>Gender</td> */}
+                    <td onClick={() => sortFunc("Gender")}><Button>Gender</Button></td>
                     <td>E-mail</td>
                     <td onClick={() => sortFunc("age")}><Button>Age</Button></td>
                 </tr>

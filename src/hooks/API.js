@@ -25,7 +25,8 @@ export function useGet(url){
             }   
         }
         getEmployees()
-    },[])
+    },[]
+    )
 
     // used to decide which sort function to trigger
     function sortFunc(sort){
