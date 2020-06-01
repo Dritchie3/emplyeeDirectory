@@ -1,7 +1,7 @@
 # Employee Directory
 Homework assignment where the goal is make an employee directory using React.js, populating it with random employees from an api, and allowing the user to search/sort the results.
 
-## Deployed App:
+## Deployed App: https://employee-directory-project-1.herokuapp.com/
 
 ## Github: https://github.com/Dritchie3/emplyeeDirectory
 
