@@ -8,7 +8,7 @@ function Navbar(){
         <div className="navbar">
             <div className="logo bold">Employee Directory</div>
             <div className="descriptor">
-                <div className="bold">Employee Search: </div>
+                <div className="bold">Search by First Name: </div>
                 <Search />
             </div>
         </div>

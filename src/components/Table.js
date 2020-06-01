@@ -19,11 +19,11 @@ function Table() {
             <thead>
                 <tr>
                     <td onClick={() => sortFunc("name")}><Button>First Name</Button></td>
-                    <td>Last Name</td>
+                    <td onClick={() => sortFunc("lastName")}><Button>Last Name</Button></td>
                     <td>UID</td>
-                    {/* <td>Gender</td> */}
-                    <td onClick={() => sortFunc("Gender")}><Button>Gender</Button></td>
-                    <td>E-mail</td>
+                    <td onClick={() => sortFunc("gender")}><Button>Gender</Button></td>
+                    <td onClick={() => sortFunc("email")}><Button>Email</Button></td>
+                    {/* <td>E-mail</td> */}
                     <td onClick={() => sortFunc("age")}><Button>Age</Button></td>
                 </tr>
             </thead>

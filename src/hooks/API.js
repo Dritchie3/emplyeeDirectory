@@ -34,12 +34,18 @@ export function useGet(url){
             case "name":
                 sortByName()
                 break
+            case "lastName":
+                sortByLastName()
+                break
+            case "email":
+                email()
+                break
             case "age":
                 sortByAge()
                 break
-            // case "gender":
-            //     sortByGender()
-            //     break
+            case "gender":
+                sortByGender()
+                break
             default:
                 console.log("sort does not match any cases")
         }
@@ -57,21 +63,46 @@ export function useGet(url){
         // You have to spread, because this creates a new variable, instead of just updating the variable. React will not recognize it as an update if you just update the variable.
         setDisplayedEmployees([...employees])
     }
+    // sorts the employees based on last name.
+    function sortByLastName(){
+         employees.sort(function(a,b){
+            if(a.name.last < b.name.last){
+                return -1;
+            }else{
+                return 1;
+            }
+        })
+        setDisplayedEmployees([...employees])
+    }
+    function email(){
+         employees.sort(function(a,b){
+            if(a.email < b.email){
+                return -1;
+            }else{
+                return 1;
+            }
+        })
+        setDisplayedEmployees([...employees])
+    }
 
     // sorts the employees based on age.
-    function sortByAge(){
+    function sortByAge(){        
         employees.sort(function(a,b){
             return (a.dob.age - b.dob.age)
         })
         setDisplayedEmployees([...employees])
     }
-    // sort by gender
-    // function sortByGender(){
-    //     employees.sort(function(a,b){
-    //         return (a.gender.male, b.gender.female)
-    //     })
-    //     setDisplayedEmployees([...employees])
-    // }
+        // sorts the employees based on gender.
+        function sortByGender(){
+            employees.sort(function(a,b){
+               if(a.gender < b.gender){
+                   return -1;
+               }else{
+                   return 1;
+               }
+           })
+             setDisplayedEmployees([...employees])
+       }
 
     return {displayedEmployees, sortFunc}
 }
